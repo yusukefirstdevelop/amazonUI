@@ -8,27 +8,28 @@ Widget buildIconsList() => Padding(
         bottom: Constants.kPadding,
       ),
       child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: List.generate(
-              headerImages.length,
-              (index) => Container(
-                width: 100,
-                child: Column(
-                  children: [
-                    Image.asset(
-                      headerImages[index].icon,
-                      height: 50,
-                      width: 50,
-                    ),
-                    Text(
-                      headerImages[index].title,
-                      textAlign: TextAlign.center,
-                    )
-                  ],
-                ),
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: List.generate(
+            headerImages.length,
+            (index) => Container(
+              width: 100,
+              child: Column(
+                children: [
+                  Image.asset(
+                    headerImages[index].icon,
+                    height: 50,
+                    width: 50,
+                  ),
+                  Text(
+                    headerImages[index].title,
+                    textAlign: TextAlign.center,
+                  )
+                ],
               ),
             ),
-          )),
+          ),
+        ),
+      ),
     );
